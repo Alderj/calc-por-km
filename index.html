@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/ico.ico" type="image/x-icon">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Calculadora de Gasto em R$ por Km Rodado - HTML + CSS + JS + Bootstrap 5</title>
+</head>
+
+<body>  
+    <div class="w-100 m-auto formulario">
+        <div class="mb-3">
+            <label for="precodocombustivel" class="form-label text-center">Preço do Combustível em R$:</label>
+            <input type="number" class="form-control" id="precodocombustivel" placeholder="Ex: 5.79">
+        </div>
+        <div class="mb-3">
+            <label for="mediadocarro" class="form-label">Quantos Km seu carro faz por litro</label>
+            <input type="text" class="form-control" id="mediadocarro" placeholder="Ex: 10">
+        </div>
+        <div class="mb-3">
+            <label for="distanciaapercorrer" class="form-label">Distância em Percorrida em KM</label>
+            <input type="text" class="form-control" id="distanciaapercorrer" placeholder="Ex: 758">
+        </div>
+
+        <div class="mb-3">
+            <label for="text_area" class="form-label">Será gasto em R$ por KM rodado:</label>
+            <textarea class="form-control" id="text_area" rows="5"
+                placeholder="Seu resultado será exibido aqui."></textarea>
+        </div>
+        <button class="btn btn-primary" onclick="calcular()">Calcular</button>
+    </div>
+
+    <script src="bootstrap/popper.min.js"></script>
+    <script src="bootstrap/js_bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

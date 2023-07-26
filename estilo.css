@@ -1,0 +1,41 @@
+:root {
+    --color-primary: #c1c1c1;
+    --color-secondary: #a5e5ff;
+    --color-tertiary: 
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {    
+    background-color: var(--color-primary);
+}
+
+.formulario {
+    max-width: 650px;
+    padding: .5rem;
+    background-color: var(--color-secondary);
+    margin-top: 30px;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-label{
+    font-weight: bold;
+    font-size: 18px;
+}
+#text_area{
+    color: red;
+    font-size: 20px;
+}
+
+.form-control{
+    color: var(--color-tertiary);
+    font-size: 18px;
+}
+button{
+    font-weight: bold;
+}
