@@ -1,7 +1,8 @@
 :root {
     --color-primary: #c1c1c1;
     --color-secondary: #a5e5ff;
-    --color-tertiary: 
+    --color-tertiary: #0a6522;
+    --color-red: red;
 }
 
 * {
@@ -14,13 +15,24 @@ body {
     background-color: var(--color-primary);
 }
 
+
+.form-control{
+    color: var(--color-tertiary);
+    font-weight: bolder;
+}
+
+.form-control:focus{
+    color: var(--color-red);
+    font-weight: light;
+}
+
 .formulario {
     max-width: 650px;
     padding: .5rem;
     background-color: var(--color-secondary);
-    margin-top: 30px;
     align-items: center;
     height: 100vh;
+    padding-top: 20px;
 }
 
 .form-label{
@@ -28,7 +40,7 @@ body {
     font-size: 18px;
 }
 #text_area{
-    color: red;
+    color: var(--color-red);
     font-size: 20px;
 }
 
@@ -36,6 +48,18 @@ body {
     color: var(--color-tertiary);
     font-size: 18px;
 }
-button{
+.btn{
     font-weight: bold;
+}
+
+
+
+@media (min-width: 992px){
+    .formulario{
+        max-width: 980px;
+        padding: 5rem;
+        margin: 25px auto;
+        border-radius: 2%;
+        height: 90vh;
+    }
 }
