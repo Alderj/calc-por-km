@@ -4,7 +4,10 @@ function calcular(){
     let distancia = document.getElementById("distanciaapercorrer").value; 
 
     let litrosConsumidos = (distancia/mediaDoCarro).toFixed(2);
-    let res = (litrosConsumidos * precoCombustivel).toFixed(2); 
+    let res = (litrosConsumidos * precoCombustivel).toFixed(2);
+
+    litrosConsumidos = litrosConsumidos.replace(".", ",");   
+    res = res.replace(".", ","); 
 
     document.getElementById("text_area").innerText= "Consumido " + litrosConsumidos + " litros de combustível nessa viagem, com um total de R$ " + res + " gastos para percorrer " + distancia + " Km.";
 

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/ico.ico" type="image/x-icon">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Calculadora de Gasto em R$ por Km Rodado - HTML + CSS + JS + Bootstrap 5</title>
+</head>
+
+<body>  
+    <div class="w-100 formulario">
+        <div class="mb-3">
+            <label for="precodocombustivel" class="form-label text-center">Preço do Combustível em R$:</label>
+            <input type="number" class="form-control" id="precodocombustivel" step="0.01" placeholder="Ex: 5,79">
+        </div>
+        <!-- Resto do código permanece igual -->
+        <!-- ... -->
+
+        <script src="bootstrap/popper.min.js"></script>
+        <script src="bootstrap/js_bootstrap.bundle.min.js"></script>
+        <script src="script.js">
+            function calcular(){
+        let precoCombustivel = document.getElementById("precodocombustivel").value;
+        precoCombustivel = precoCombustivel.replace(",", "."); // Substituir vírgula por ponto
+        let mediaDoCarro = document.getElementById("mediadocarro").value;
+        let distancia = document.getElementById("distanciaapercorrer").value; 
+
+        let litrosConsumidos = (distancia/mediaDoCarro).toFixed(2);
+        let res = (litrosConsumidos * precoCombustivel).toFixed(2); 
+
+        // Substituir ponto por vírgula nos resultados antes de exibir no textarea
+        litrosConsumidos = litrosConsumidos.replace(".", ",");
+        res = res.replace(".", ",");
+
+        document.getElementById("text_area").innerText= "Consumido " + litrosConsumidos + " litros de combustível nessa viagem, com um total de R$ " + res + " gastos para percorrer " + distancia + " Km.";
+
+    }
+
+        </script>
+    </body>
+
+    </html>
